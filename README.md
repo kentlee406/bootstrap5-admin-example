@@ -1,2 +1,2 @@
-# bootstrap5-admin-example
-後台管理 - 功能性為導向的介面規劃
+# Bootstrap 5 網頁切版整合術
+搭配章節：後台管理 - 功能性為導向的介面規劃
