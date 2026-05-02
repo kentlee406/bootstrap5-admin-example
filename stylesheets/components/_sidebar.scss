@@ -1,0 +1,68 @@
+$sidebar-width: 280px;
+// 行動版
+.sidebar {
+  width: $sidebar-width;
+  margin-left: -$sidebar-width;
+  transition: margin-left 0.3s;
+  position: fixed;
+  top: 53px; // 行動版：避免蓋住 topbar
+  .sidebar-link {
+    color: $dark;
+    display: block;
+    text-decoration: none;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    &:hover {
+      background-color: rgba($primary, 0.16);
+    }
+  }
+  .sidebar-link.active {
+    position: relative;
+    color: $primary !important;
+    background-color: rgba($primary, 0.16);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 2px;
+      height: 100%;
+      width: 3px;
+      background: $primary;
+    }
+  }
+}
+.main {
+  width: 100vw;
+}
+
+// 展開sidebar
+.sidebar-toggled {
+  .sidebar {
+    margin-left: 0;
+  }
+}
+// 桌面版
+@include media-breakpoint-up(lg) {
+  .sidebar {
+    margin-left: 0px;
+    width: $sidebar-width;
+    top: 0;
+  }
+
+  .main {
+    width: calc(100vw - #{$sidebar-width});
+    margin-left: $sidebar-width;
+    transition: margin-left 0.3s;
+  }
+
+  // 展開sidebar
+  .sidebar-toggled {
+    .sidebar {
+      margin-left: -$sidebar-width;
+    }
+    .main {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
