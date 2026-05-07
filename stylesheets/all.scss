@@ -5,6 +5,10 @@
 @import "helpers/utilities";
 @import "components/sidebar";
 
+.sidebar {
+  z-index: 1040;
+}
+
 .order-bookmark-link {
   transition:
     background-color 0.2s ease,
