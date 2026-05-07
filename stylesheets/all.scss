@@ -5,4 +5,25 @@
 @import "helpers/utilities";
 @import "components/sidebar";
 
+.order-bookmark-link {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.order-bookmark-link:hover {
+  background-color: rgba($primary, 0.08);
+  color: $primary;
+}
+
+.order-bookmark-link.active {
+  background-color: $primary;
+  border-color: $primary;
+  color: $white;
+}
+
+.order-section {
+  scroll-margin-top: 4.5rem;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";
