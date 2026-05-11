@@ -16,13 +16,13 @@
         <!-- 後台名稱 -->
         <div class="px-4"><strong>六角西餐廳</strong> - 後台管理</div>
         <!-- 選單 -->
-        <div class="overflow-auto mt-3">
-          <div>
+        <ul class="list-unstyled overflow-auto mt-3">
+          <li>
             <a href="home.html" class="sidebar-link active"
               ><div class="px-4">首頁</div></a
             >
-          </div>
-          <div>
+          </li>
+          <li>
             <a
               href="#menu-order"
               class="sidebar-link"
@@ -32,16 +32,18 @@
               aria-controls="menu-order"
               ><div class="d-flex justify-content-between px-4">
                 <p class="mb-0">訂單管理</p>
-                <i class="bi bi-caret-down"></i></div
+                <i class="bi bi-caret-down menu-icon"></i></div
             ></a>
-            <div class="collapse" id="menu-order">
-              <div class="ps-5">
+            <ul class="collapse list-unstyled" id="menu-order">
+              <li class="ps-5">
                 <a href="orders.html" class="sidebar-link">全部訂單</a>
+              </li>
+              <li class="ps-5">
                 <a href="order.html" class="sidebar-link">單一訂單</a>
-              </div>
-            </div>
-          </div>
-        </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
         <!-- 登出按鈕(ICON自行補上) -->
         <a href="#" class="mt-auto sidebar-link"
           ><div class="px-4"><i class="bi bi-box-arrow-right"></i> 登出</div></a
